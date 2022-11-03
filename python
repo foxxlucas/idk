@@ -1,9 +1,12 @@
+print ("My rock paper scissors game!")
+print ("  ")
+
 from random import choice
 
 objects = ["rock", "paper", "scissors"]
 computer = choice(objects)
 
-player1 = input("What will you choose? Rock, Paper, or Scissors?").lower()
+player1 = input("What will you choose? Rock, Paper, or Scissors?\n").lower()
 
 if player1 == computer:
   print("its is a tie! :p")
@@ -30,3 +33,4 @@ if player1 == ("scissors"):     #SCISSORS & ROCK
 print ("First round done!") 
 
 from random import choice 
+
