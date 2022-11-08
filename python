@@ -1,36 +1,54 @@
-print ("My rock paper scissors game!")
-print ("  ")
-
 from random import choice
 
+print("My rock paper scissors game!")
+
 objects = ["rock", "paper", "scissors"]
-computer = choice(objects)
+tally = 0
+wins = 0;
+losses = 0;
 
-player1 = input("What will you choose? Rock, Paper, or Scissors?\n").lower()
+while tally != 3:
+ computer = choice(objects)
+ player1 = input("What will you choose? Rock, Paper, or Scissors?\n").lower()
+ if player1 == computer:
+    print("its is a tie! :p")
+    tally += 0
+    wins += 0 
+    losses += 0
+ if player1 == "rock":  # ROCK & SCISSORS\
+    if computer == "scissors":
+        print("you won! :)")
+        tally += 1
+        wins += 1
+ if player1 == "scissors":  # ROCK & PAPER
+    if computer == "paper":
+        print("yay! you won! :)")
+        tally += 1
+        wins += 1
+ if player1 == "paper":  # PAPER & ROCK
+    if computer == "rock":
+        print("omgg! you won ur so cool :)")
+        tally += 1
+        wins += 1
+if player1 == "paper":  # PAPER & SCISSORS
+    if computer == "scissors":
+        print("you lost :c :)")
+        tally += 1
+        losses += 1
+if player1 == "rock":  # SCISSORS & PAPER
+    if computer == "paper":
+        print("noo u losttt")
+        tally += 1
+        losses += 1
+if player1 == "scissors":  # SCISSORS & ROCK
+    if computer == "rock":
+        print("You lost to a code bruh")
+        tally += 1
+        losses += 1
+if (wins > losses):
+    print ("omg you're so coool! you won the best of three!")
+if (wins < losses):
+ print ("u lost the best of three :c")
 
-if player1 == computer:
-  print("its is a tie! :p")
-  
-if player1 == ("rock"):        #ROCK & SCISSORS
-  if computer == ("scissors"):
-    print("you won! :)")
-if player1 == ("scissors"):        #ROCK & PAPER
-  if computer == ("Paper"):
-    print("yay! you won! :)")
-if player1 == ("paper"):        #PAPER & ROCK 
-  if computer == ("rock"):
-    print("omgg! you won ur so cool :)")
-if player1 == ("paper"):        #PAPER & SCISSORS
-  if computer == ("scissors"):
-    print("you lost :c :)")
-if player1 == ("rock"):      #SCISSORS & PAPER
-  if computer == ("paper"):
-    print("noo u losttt ")
-if player1 == ("scissors"):     #SCISSORS & ROCK 
-  if computer == ("rock"):
-    print("You lost to a code bruh")
-
-print ("First round done!") 
-
-from random import choice 
+print("thx for playing :)")
 
